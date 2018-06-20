@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		8C29401A20D6F008001623A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C29401920D6F008001623A9 /* AppDelegate.swift */; };
-		8C29401C20D6F008001623A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C29401B20D6F008001623A9 /* ViewController.swift */; };
-		8C29401F20D6F008001623A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C29401D20D6F008001623A9 /* Main.storyboard */; };
 		8C29402120D6F009001623A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C29402020D6F009001623A9 /* Assets.xcassets */; };
-		8C29402420D6F009001623A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C29402220D6F009001623A9 /* LaunchScreen.storyboard */; };
+		8C29403420D6F408001623A9 /* DefaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C29403320D6F408001623A9 /* DefaultButton.swift */; };
+		8C29403A20D99EAD001623A9 /* SelectFranchiseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C29403920D99EAD001623A9 /* SelectFranchiseViewController.swift */; };
+		8C29403E20DA0827001623A9 /* DefaultVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C29403D20DA0826001623A9 /* DefaultVariables.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8C29401620D6F008001623A9 /* GamesDatabaseViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GamesDatabaseViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C29401920D6F008001623A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8C29401B20D6F008001623A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8C29401E20D6F008001623A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8C29402020D6F009001623A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8C29402320D6F009001623A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8C29402520D6F009001623A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8C29403320D6F408001623A9 /* DefaultButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButton.swift; sourceTree = "<group>"; };
+		8C29403920D99EAD001623A9 /* SelectFranchiseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFranchiseViewController.swift; sourceTree = "<group>"; };
+		8C29403D20DA0826001623A9 /* DefaultVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultVariables.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +54,38 @@
 		8C29401820D6F008001623A9 /* GamesDatabaseViewer */ = {
 			isa = PBXGroup;
 			children = (
-				8C29401920D6F008001623A9 /* AppDelegate.swift */,
-				8C29401B20D6F008001623A9 /* ViewController.swift */,
-				8C29401D20D6F008001623A9 /* Main.storyboard */,
-				8C29402020D6F009001623A9 /* Assets.xcassets */,
-				8C29402220D6F009001623A9 /* LaunchScreen.storyboard */,
 				8C29402520D6F009001623A9 /* Info.plist */,
+				8C29404020DA091B001623A9 /* Default Files */,
+				8C29403F20DA0903001623A9 /* Select Franchise */,
+				8C29403220D6F3DA001623A9 /* View Objects */,
 			);
 			path = GamesDatabaseViewer;
+			sourceTree = "<group>";
+		};
+		8C29403220D6F3DA001623A9 /* View Objects */ = {
+			isa = PBXGroup;
+			children = (
+				8C29403320D6F408001623A9 /* DefaultButton.swift */,
+			);
+			path = "View Objects";
+			sourceTree = "<group>";
+		};
+		8C29403F20DA0903001623A9 /* Select Franchise */ = {
+			isa = PBXGroup;
+			children = (
+				8C29403920D99EAD001623A9 /* SelectFranchiseViewController.swift */,
+			);
+			path = "Select Franchise";
+			sourceTree = "<group>";
+		};
+		8C29404020DA091B001623A9 /* Default Files */ = {
+			isa = PBXGroup;
+			children = (
+				8C29402020D6F009001623A9 /* Assets.xcassets */,
+				8C29401920D6F008001623A9 /* AppDelegate.swift */,
+				8C29403D20DA0826001623A9 /* DefaultVariables.swift */,
+			);
+			path = "Default Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,9 +146,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C29402420D6F009001623A9 /* LaunchScreen.storyboard in Resources */,
 				8C29402120D6F009001623A9 /* Assets.xcassets in Resources */,
-				8C29401F20D6F008001623A9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,31 +157,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C29401C20D6F008001623A9 /* ViewController.swift in Sources */,
+				8C29403A20D99EAD001623A9 /* SelectFranchiseViewController.swift in Sources */,
+				8C29403420D6F408001623A9 /* DefaultButton.swift in Sources */,
 				8C29401A20D6F008001623A9 /* AppDelegate.swift in Sources */,
+				8C29403E20DA0827001623A9 /* DefaultVariables.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		8C29401D20D6F008001623A9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8C29401E20D6F008001623A9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8C29402220D6F009001623A9 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8C29402320D6F009001623A9 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		8C29402620D6F009001623A9 /* Debug */ = {
@@ -282,7 +287,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GamesDatabaseViewer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +305,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = GamesDatabaseViewer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
