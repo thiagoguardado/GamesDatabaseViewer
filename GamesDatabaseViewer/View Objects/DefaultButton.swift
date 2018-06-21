@@ -19,11 +19,12 @@ class DefaultButton : UIButton
     // set tite and color
     setTitle(title, for: .normal)
     setTitleColor(DefaultVariables.titleColor, for: .normal)
-    backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+    titleLabel?.adjustsFontSizeToFitWidth = true
+    backgroundColor = #colorLiteral(red: 0.9707569106, green: 0.9707569106, blue: 0.9707569106, alpha: 1)
     
     // set corner and shadow
     layer.cornerRadius = 16.0;
-    layer.shadowColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+    layer.shadowColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
     layer.shadowOffset = CGSize(width: 2, height: 2)
     layer.shadowOpacity = 0.9
     

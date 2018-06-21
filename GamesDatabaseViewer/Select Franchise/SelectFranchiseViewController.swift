@@ -9,25 +9,35 @@
 import UIKit
 
 class SelectFranchiseViewController: UIViewController {
-
-    var viewsDict = Dictionary<String, UIView>()
   
   
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        view.backgroundColor = UIColor.white
-      
-        createTitle()
-      
-        createButtons()
-    }
-
+  var viewsDict = Dictionary<String, UIView>()
+  var viewModel : SelectFranchiseModel
   
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+  init(viewModel: SelectFranchiseModel) {
+    self.viewModel = viewModel
+    super.init(nibName: nil, bundle: nil)
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    
+    view.backgroundColor = UIColor.white
+    
+    createTitle()
+    
+    createButtons()
+  }
+  
+  
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+  }
+  
   
   func createTitle()
   {
@@ -60,19 +70,23 @@ class SelectFranchiseViewController: UIViewController {
     view.addSubview(container)
     viewsDict["container"] = container
     
-    let franchiseNames = ["Super Mario","Zelda","Final Fantasy"]
+    let franchiseNames = viewModel.franchises
     var verticalConstraintString = "V:|"
     
     for index in 0..<franchiseNames.count {
+      // create button
       let button = DefaultButton(title: franchiseNames[index])
+      button.addTarget(self, action: #selector(buttonClick), for: .touchUpInside)
+      
+      // add button to container and dictionary
       container.addSubview(button)
       viewsDict["btn\(index)"] = button
-      button.translatesAutoresizingMaskIntoConstraints = false
-      
+
       // create vertical constraint string
       verticalConstraintString.append("[btn\(index)]-30-")
       
       // constranti to container horizontally
+      button.translatesAutoresizingMaskIntoConstraints = false
       NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "H:|[btn\(index)]|", options: [], metrics: nil, views: viewsDict))
       
     }
@@ -86,8 +100,40 @@ class SelectFranchiseViewController: UIViewController {
     NSLayoutConstraint.activate(NSLayoutConstraint.constraints(withVisualFormat: "H:|-20-[container]-20-|", options: [], metrics: nil, views: viewsDict))
     NSLayoutConstraint(item: container, attribute: .centerY, relatedBy: .equal, toItem: view, attribute: .centerY, multiplier: 1, constant: 0).isActive = true
     
-
+    
   }
-
-
+  
+  @objc func buttonClick(sender: UIButton!) throws
+  {
+    enum SelectFranchiseError : Error
+    {
+      case buttonEmpty
+      case workerReturnedNil
+    }
+    
+    if let franchise = sender.titleLabel?.text
+    {
+      
+      if let games = viewModel.worker.getGames(from: franchise)
+      {
+        
+        viewModel.routeToDetailFranchise(source: self)
+        
+      }
+      else
+      {
+        // display alert
+        let alert = UIAlertController(title: "Sorry...", message: "Could not retrieve game franchise from database.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+      }
+      
+    } else
+    {
+      throw SelectFranchiseError.buttonEmpty
+    }
+    
+  }
+  
 }
+

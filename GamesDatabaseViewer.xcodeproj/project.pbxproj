@@ -12,6 +12,11 @@
 		8C29403420D6F408001623A9 /* DefaultButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C29403320D6F408001623A9 /* DefaultButton.swift */; };
 		8C29403A20D99EAD001623A9 /* SelectFranchiseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C29403920D99EAD001623A9 /* SelectFranchiseViewController.swift */; };
 		8C29403E20DA0827001623A9 /* DefaultVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C29403D20DA0826001623A9 /* DefaultVariables.swift */; };
+		8C29404220DB03FE001623A9 /* DetailFranchiseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C29404120DB03FE001623A9 /* DetailFranchiseViewController.swift */; };
+		8C29404520DB6F7C001623A9 /* SelectFranchiseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C29404420DB6F7C001623A9 /* SelectFranchiseModel.swift */; };
+		8C29404720DB72BA001623A9 /* SelectFranchiseWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C29404620DB72BA001623A9 /* SelectFranchiseWorker.swift */; };
+		8C29404920DB76FD001623A9 /* DetailFranchiseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C29404820DB76FD001623A9 /* DetailFranchiseModel.swift */; };
+		8C29404B20DB7B14001623A9 /* IGDBRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C29404A20DB7B14001623A9 /* IGDBRequester.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		8C29403320D6F408001623A9 /* DefaultButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultButton.swift; sourceTree = "<group>"; };
 		8C29403920D99EAD001623A9 /* SelectFranchiseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFranchiseViewController.swift; sourceTree = "<group>"; };
 		8C29403D20DA0826001623A9 /* DefaultVariables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultVariables.swift; sourceTree = "<group>"; };
+		8C29404120DB03FE001623A9 /* DetailFranchiseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFranchiseViewController.swift; sourceTree = "<group>"; };
+		8C29404420DB6F7C001623A9 /* SelectFranchiseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFranchiseModel.swift; sourceTree = "<group>"; };
+		8C29404620DB72BA001623A9 /* SelectFranchiseWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFranchiseWorker.swift; sourceTree = "<group>"; };
+		8C29404820DB76FD001623A9 /* DetailFranchiseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFranchiseModel.swift; sourceTree = "<group>"; };
+		8C29404A20DB7B14001623A9 /* IGDBRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGDBRequester.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +66,10 @@
 			children = (
 				8C29402520D6F009001623A9 /* Info.plist */,
 				8C29404020DA091B001623A9 /* Default Files */,
+				8C29404320DB0406001623A9 /* Detail Franchise */,
 				8C29403F20DA0903001623A9 /* Select Franchise */,
 				8C29403220D6F3DA001623A9 /* View Objects */,
+				8C29404A20DB7B14001623A9 /* IGDBRequester.swift */,
 			);
 			path = GamesDatabaseViewer;
 			sourceTree = "<group>";
@@ -74,6 +86,8 @@
 			isa = PBXGroup;
 			children = (
 				8C29403920D99EAD001623A9 /* SelectFranchiseViewController.swift */,
+				8C29404420DB6F7C001623A9 /* SelectFranchiseModel.swift */,
+				8C29404620DB72BA001623A9 /* SelectFranchiseWorker.swift */,
 			);
 			path = "Select Franchise";
 			sourceTree = "<group>";
@@ -86,6 +100,15 @@
 				8C29403D20DA0826001623A9 /* DefaultVariables.swift */,
 			);
 			path = "Default Files";
+			sourceTree = "<group>";
+		};
+		8C29404320DB0406001623A9 /* Detail Franchise */ = {
+			isa = PBXGroup;
+			children = (
+				8C29404120DB03FE001623A9 /* DetailFranchiseViewController.swift */,
+				8C29404820DB76FD001623A9 /* DetailFranchiseModel.swift */,
+			);
+			path = "Detail Franchise";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,7 +181,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C29403A20D99EAD001623A9 /* SelectFranchiseViewController.swift in Sources */,
+				8C29404520DB6F7C001623A9 /* SelectFranchiseModel.swift in Sources */,
+				8C29404220DB03FE001623A9 /* DetailFranchiseViewController.swift in Sources */,
 				8C29403420D6F408001623A9 /* DefaultButton.swift in Sources */,
+				8C29404920DB76FD001623A9 /* DetailFranchiseModel.swift in Sources */,
+				8C29404B20DB7B14001623A9 /* IGDBRequester.swift in Sources */,
+				8C29404720DB72BA001623A9 /* SelectFranchiseWorker.swift in Sources */,
 				8C29401A20D6F008001623A9 /* AppDelegate.swift in Sources */,
 				8C29403E20DA0827001623A9 /* DefaultVariables.swift in Sources */,
 			);
